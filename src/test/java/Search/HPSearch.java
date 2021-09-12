@@ -9,13 +9,15 @@ import utils.BookTitles;
 public class HPSearch extends Base {
 
     @Test
-    public void verifyTitleBadgeTypeAndPriceOfFirstResult(){
+    public void verifyTitleBadgeTypeAndPriceOfFirstResult() {
 
         SearchPage.verifyPageIsCorrectAndOpen();
         SearchPage.selectSearchSection("Books");
         SearchPage.searchFor(BookTitles.HarryPotter8);
         ResultsPage.verifyFirstItemsTitle(BookTitles.HarryPotter8);
-
-
+        ResultsPage.verifyThatFirstResultHasABadge();
+        ResultsPage.openFirstResult();
+        ResultsPage.verifyThatCorrectFormatIsPreSelected("Paperback");
+        ResultsPage.getCurrentPriceAndVerifyItMatchOnceInBasket();
+        }
     }
-}
