@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 import core.Base;
 import org.testng.annotations.Test;

@@ -1,0 +1,10 @@
+<!--https://testng.org/doc/documentation-main.html-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test-Suite" >
+    <test name="Amazon search for Harry Potter" >
+        <classes>
+            <class name="search.HPSearch" />
+        </classes>
+    </test>
+</suite>
